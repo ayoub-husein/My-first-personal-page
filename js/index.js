@@ -2,14 +2,14 @@ var $links = $('.itemLinks')
 
 $links.click(function(e){
     $links.removeClass('active')
-    var clickedLink = e.target
-    clickedLink = $(clickedLink)
-    var position = clickedLink.attr('data-pos')
+    var clickLink = e.target
+    clickLink = $(clickLink)
+    var position = clickLink.attr('data-pos')
     var translatevalue = 'translate3d('+ position * 25 +"%, 0px, 0)"
     $('#wrapper').css({
         transform: translatevalue
     })
-    clickedLink.addClass('active')
+    clickLink.addClass('active')
 })
 
 $($links[0]).addClass('active')
